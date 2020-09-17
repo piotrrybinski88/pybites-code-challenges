@@ -1,5 +1,5 @@
 import re
-
+import shlex
 
 def split_words_and_quoted_text(text):
     """Split string text by space unless it is
@@ -20,3 +20,8 @@ def split_words_and_quoted_text(text):
             text_without_double_quates[num] = text_with_double_quates.strip('"')
 
     return text_without_double_quates
+
+
+# Solution from pybit.es using shlex
+def split_words_and_quoted_text(text):
+    return shlex.split(text)
