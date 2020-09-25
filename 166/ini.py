@@ -29,5 +29,5 @@ class ToxIniParser:
         return set([
             self.config[smth].get('basepython').encode('utf-8')
             for smth in self.config
-            if self.config[smth].get('basepython') is not None
+            if self.config[smth].get('basepython')
             ])
